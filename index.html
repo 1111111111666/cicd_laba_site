@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вайбкодер — визитка | Пишу код на вайбе</title>
+  <meta name="description" content="Смешная сайт-визитка вайбкодера: пишу код на вайбе, дебажу на интуиции, коммичу в пятницу вечером.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎧</text></svg>">
+</head>
+<body>
+  <div class="blobs" aria-hidden="true">
+    <span class="blob blob-1"></span>
+    <span class="blob blob-2"></span>
+    <span class="blob blob-3"></span>
+  </div>
+
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker__track">
+      <span>git push --force</span><span class="ticker__dot">◆</span>
+      <span>работает у меня</span><span class="ticker__dot">◆</span>
+      <span>тесты? не слышал</span><span class="ticker__dot">◆</span>
+      <span>README не читал, но осуждаю</span><span class="ticker__dot">◆</span>
+      <span>это не баг, это фича</span><span class="ticker__dot">◆</span>
+      <span>TODO: починить</span><span class="ticker__dot">◆</span>
+      <span>copilot предложил — я согласился</span><span class="ticker__dot">◆</span>
+      <span>100% вайба, 0% покрытия</span><span class="ticker__dot">◆</span>
+    </div>
+  </div>
+
+  <header class="nav">
+    <a class="nav__logo" href="#top">🎧 вайб<span>.dev</span></a>
+    <nav class="nav__links">
+      <a href="#skills">Скиллы</a>
+      <a href="#stack">Стек</a>
+      <a href="#price">Прайс</a>
+      <a href="#reviews">Отзывы</a>
+      <a href="#excuses">Отговорки</a>
+      <a href="#contact">Контакты</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <p class="hero__badge">доступен для <s>работы</s> вайбов</p>
+      <h1>Вайбкодинг<span class="hero__dot">.</span></h1>
+      <p class="hero__tagline"><span id="typewriter"></span><span class="caret">▌</span></p>
+      <p class="hero__text">
+        Я не пишу код. Я задаю ему <b>настроение</b>. Иногда код соглашается.
+      </p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="#contact">Нанять вайбера</a>
+        <button class="btn btn--ghost" id="worksBtn" type="button">Работает у меня</button>
+      </div>
+      <p class="hero__hint" id="worksHint">нажми, если код хотя бы запускается</p>
+    </section>
+
+    <section class="section" id="skills">
+      <h2 class="section__title">Скиллы <span class="section__sub">(самооценка, субъективная, завышенная)</span></h2>
+      <ul class="skills">
+        <li class="skill" data-level="146">
+          <div class="skill__head"><span>Промпт-инжиниринг</span><span class="skill__val">146%</span></div>
+          <div class="skill__bar"><i></i></div>
+        </li>
+        <li class="skill" data-level="99">
+          <div class="skill__head"><span>Вера в «оно само заработает»</span><span class="skill__val">99%</span></div>
+          <div class="skill__bar"><i></i></div>
+        </li>
+        <li class="skill" data-level="93">
+          <div class="skill__head"><span>Рефакторинг в 3 часа ночи</span><span class="skill__val">93%</span></div>
+          <div class="skill__bar"><i></i></div>
+        </li>
+        <li class="skill" data-level="41">
+          <div class="skill__head"><span>Работа с Git без паники</span><span class="skill__val">41%</span></div>
+          <div class="skill__bar"><i></i></div>
+        </li>
+        <li class="skill" data-level="7">
+          <div class="skill__head"><span>Чтение стектрейсов</span><span class="skill__val">7%</span></div>
+          <div class="skill__bar"><i></i></div>
+        </li>
+        <li class="skill" data-level="2">
+          <div class="skill__head"><span>Чтение документации (по диагонали)</span><span class="skill__val">2%</span></div>
+          <div class="skill__bar"><i></i></div>
+        </li>
+      </ul>
+      <p class="section__note">146% — потому что я ещё и немного вру.</p>
+    </section>
+
+    <section class="section" id="stack">
+      <h2 class="section__title">Мой стек</h2>
+      <p class="section__lead">Всё, что нужно настоящему инженеру: надежда и автодополнение.</p>
+      <ul class="chips">
+        <li class="chip chip--hot">ChatGPT</li>
+        <li class="chip">Copilot</li>
+        <li class="chip">Claude</li>
+        <li class="chip">Cursor</li>
+        <li class="chip chip--hot">Stack Overflow</li>
+        <li class="chip">Копипаста из 2014</li>
+        <li class="chip">Ctrl + Z</li>
+        <li class="chip chip--hot">Надежда</li>
+        <li class="chip">console.log</li>
+        <li class="chip">«Попробуй ещё раз»</li>
+      </ul>
+    </section>
+
+    <section class="section stats">
+      <div class="stat"><b data-count="128000">0</b><span>строк кода написано</span></div>
+      <div class="stat"><b data-count="12">0</b><span>строк кода понято</span></div>
+      <div class="stat"><b data-count="4200000">0</b><span>токенов сожжено</span></div>
+      <div class="stat"><b data-count="341">0</b><span>коммитов «wip»</span></div>
+      <div class="stat"><b data-count="508">0</b><span>«потом починю» в TODO</span></div>
+      <div class="stat"><b data-count="1">0</b><span>работающий продакшн</span></div>
+    </section>
+
+    <section class="section" id="price">
+      <h2 class="section__title">Услуги и прайс</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Починить баг</h3>
+          <p class="card__price">100 ₽</p>
+          <p>Уточнение: «Нет, это фича»</p>
+          <p class="card__price card__price--big">5 000 ₽</p>
+        </article>
+        <article class="card card--accent">
+          <h3>Сделаю за 5 минут</h3>
+          <p class="card__price">по договорённости</p>
+          <p>Фактический срок: 5 минут × 1 000 итераций промпта.</p>
+        </article>
+        <article class="card">
+          <h3>Напишу тесты</h3>
+          <p class="card__price">ахаха</p>
+          <p>Ладно. Но только если вы первым напишете тесты для меня.</p>
+        </article>
+        <article class="card">
+          <h3>Объясню код на созвоне</h3>
+          <p class="card__price">1 час</p>
+          <p>Честно предупреждаю: я сам его вижу впервые.</p>
+        </article>
+        <article class="card">
+          <h3>Деплой в пятницу</h3>
+          <p class="card__price">бесплатно</p>
+          <p>Оплата — субботним созвоном и седым виском.</p>
+        </article>
+        <article class="card card--accent">
+          <h3>Ревью вашего PR</h3>
+          <p class="card__price">«выглядит ок»</p>
+          <p>Полное ревью: 1 комментарий, поставлен на весь файл.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="reviews">
+      <h2 class="section__title">Отзывы</h2>
+      <div class="cards cards--reviews">
+        <blockquote class="review">
+          <p>«Просил не использовать меня как автодополнение всего проекта. Поздно.»</p>
+          <footer>— ChatGPT</footer>
+        </blockquote>
+        <blockquote class="review">
+          <p>«Он принял мой вариант четыре раза подряд, не читая. Я горд.»</p>
+          <footer>— Copilot</footer>
+        </blockquote>
+        <blockquote class="review">
+          <p>«Вопрос закрыт как дубликат. Спасибо, что были с нами.»</p>
+          <footer>— Stack Overflow</footer>
+        </blockquote>
+        <blockquote class="review">
+          <p>«Он деплоил в пятницу. В 23:47. Я всё помню.»</p>
+          <footer>— Продакшн</footer>
+        </blockquote>
+      </div>
+    </section>
+
+    <section class="section excuses" id="excuses">
+      <h2 class="section__title">Генератор отговорок</h2>
+      <p class="section__lead">Для стендапа, код-ревью и разговоров с продактом.</p>
+      <div class="excuse-box">
+        <p class="excuse-box__text" id="excuseText">«Это не баг, это недокументированная возможность»</p>
+        <button class="btn btn--primary" id="excuseBtn" type="button">Ещё отговорку 🎲</button>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <h2 class="section__title">Связаться</h2>
+      <p class="section__lead">Отвечаю в течение 5 минут. Или 5 месяцев. Как пойдёт вайб.</p>
+      <div class="contact__row">
+        <button class="btn btn--primary" id="copyBtn" type="button" data-email="vibe@vibecoding.dev">Скопировать e-mail</button>
+        <a class="btn btn--ghost" href="#top">↑ Наверх, там тоже шутки</a>
+      </div>
+      <p class="contact__links">
+        Telegram: <b>@vibecoder</b> · GitHub: <b>@vibecoder</b> · Стендап: <b>понедельник, 10:00</b>
+      </p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year">2026</span> Вайбкодер. Сайт написан по приколу, дизайн сгенерирован за 12 секунд, совесть — за 0.</p>
+    <p class="footer__easter">Подсказка для тех, кто читает код: нажми ↑ ↑ ↓ ↓ ← → ← → B A</p>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
